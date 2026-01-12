@@ -1,0 +1,788 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  height: 44px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+
+  position: fixed;
+  /* FIXED */
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1000;
+}
+
+/* Keep inner content centered */
+.nav-wrapper {
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Prevent content from hiding behind fixed navbar */
+body {
+  padding-top: 44px;
+}
+
+
+/* Nav items */
+.nav-item {
+  position: relative;
+}
+
+.nav-item>a {
+  font-size: 12px;
+  color: #1d1d1f;
+  text-decoration: none;
+  padding: 0 12px;
+  line-height: 44px;
+  opacity: 0.85;
+}
+
+.nav-item>a:hover {
+  opacity: 1;
+}
+
+/* Submenu */
+.submenu {
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  min-width: 220px;
+  padding: 18px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border-radius: 0 0 12px 12px;
+  display: none;
+}
+
+/* Show submenu on hover */
+.nav-item:hover .submenu {
+  display: block;
+}
+
+/* Submenu links */
+.submenu a {
+  display: block;
+  padding: 6px 24px;
+  font-size: 12px;
+  color: #1d1d1f;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.submenu a:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Logo & icons */
+.logo {
+  height: 32px;
+}
+
+.icon {
+  height: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+/* hero section 1 */
+.hero1 {
+  text-align: center;
+  background-color: #f5f5f7;
+  padding: 20px 12px 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Center the offer bar like the hero image */
+.hero-offer-bar {
+  max-width: 980px;
+  margin: 0 auto 40px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* center the whole line */
+  gap: 0;
+  /* no gap */
+  text-align: center;
+}
+
+/* Remove default paragraph spacing */
+.hero-offer {
+  margin: 0;
+}
+
+/* Offer link immediately after text */
+.hero-offer-link {
+  margin-left: 4px;
+  /* optional: set to 0 if you want zero space */
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero-offer-link:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+.hero-title {
+  font-size: 56px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 8px;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  color: #1d1d1f;
+  margin-bottom: 24px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Apple blue primary button */
+.btn-primary {
+  background-color: #0071e3;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #0077ed;
+}
+
+/* Secondary outline-style button */
+.btn-secondary {
+  color: #0071e3;
+  border: 1px solid #0071e3;
+  background-color: transparent;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 113, 227, 0.856);
+  color: #ffffff;
+}
+
+
+/* Hero image1 */
+.hero-img img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+  /* 20% larger */
+}
+
+
+/* hero section 2 */
+.hero2 {
+  text-align: center;
+  background-color: #f5f5f7;
+  padding: 1px 10px 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Headings */
+.hero-subtitle2 {
+  font-size: 24px;
+  color: #1d1d1f;
+  margin-bottom: 24px;
+}
+
+/* Buttons */
+.hero-buttons2 {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.btn2 {
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Apple blue primary button */
+.btn-primary2 {
+  background-color: #0071e3;
+  color: #ffffff;
+}
+
+.btn-primary2:hover {
+  background-color: #0077ed;
+}
+
+/* Secondary outline-style button */
+.btn-secondary2 {
+  color: #0071e3;
+  border: 1px solid #0071e3;
+  background-color: transparent;
+}
+
+.btn-secondary2:hover {
+  background-color: rgba(0, 113, 227, 0.856);
+  color: #ffffff;
+}
+
+
+/* Hero image2 */
+.hero-img2 img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+  /* 20% larger */
+}
+
+
+/* hero section 3 */
+.hero3 {
+  text-align: center;
+  background: linear-gradient(90deg,
+      #b9e3ef 0%,
+      #d7f0f6 35%,
+      #d7f0f6 65%,
+      #b9e3ef 100%);
+  padding: 1px 10px 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+
+
+/* Buttons */
+.hero-buttons3 {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 1px;
+  background: linear-gradient(90deg,
+      #b9e3ef 0%,
+      #d7f0f6 35%,
+      #d7f0f6 65%,
+      #b9e3ef 100%);
+}
+
+/* Apple blue primary button */
+.btn-primary3 {
+  background-color: #0071e3;
+  color: #ffffff;
+}
+
+.btn-primary3:hover {
+  background-color: #0077ed;
+}
+
+/* Secondary outline-style button */
+.btn-secondary3 {
+  color: #0071e3;
+  border: 1px solid #0071e3;
+  background-color: transparent;
+}
+
+.btn-secondary3:hover {
+  background-color: rgba(0, 113, 227, 0.856);
+  color: #ffffff;
+}
+
+
+/* Hero image3 */
+.hero-img3 img {
+
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+  /* 20% larger */
+}
+
+/* hero section 4 */
+.hero4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* always two columns */
+  gap: 10px;
+  /* space between cards */
+  padding: 5px;
+  /* margin on all 4 sides */
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+/*  CARD BASE*/
+.hero-card {
+  text-align: center;
+  padding: 30px 10px 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/*  LEFT (DARK) CARD  */
+.hero-card-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* RIGHT (LIGHT) CARD  */
+.hero-card-light {
+  background-color: #f5f5f7;
+  color: #000000;
+}
+
+/*  HEADING IMAGE  */
+.hero-heading img {
+  max-width: 380px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/*  BUTTONS  */
+.hero-buttons4 {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+/* BUTTON BASE  */
+.hero-buttons4 a {
+  font-size: 14px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* PRIMARY BUTTON  */
+.btn-primary4 {
+  background-color: #0071e3;
+  color: #ffffff;
+}
+
+.btn-primary4:hover {
+  background-color: #0077ed;
+}
+
+/*  SECONDARY BUTTON  */
+.btn-secondary4 {
+  border: 1px solid #0071e3;
+  color: #0071e3;
+  background: transparent;
+}
+
+.btn-secondary4:hover {
+  background-color: #0071e3;
+  color: #ffffff;
+}
+
+/*  PRODUCT IMAGE */
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  transform: scale(1.03);
+  /* slight Apple-style zoom */
+  display: block;
+  margin: 0 auto;
+}
+
+
+/*  HERO SECTION 5  */
+.hero5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* always two columns */
+  gap: 10px;
+  /* space between cards */
+  padding: 5px;
+  /* margin on all 4 sides */
+  width: 100%;
+  box-sizing: border-box;
+
+
+}
+
+/*  CARD BASE  */
+.hero-card {
+  text-align: center;
+  padding: 30px 10px 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/*  LEFT (LIGHT SKY) CARD  */
+.hero-card-lightsky {
+  background: linear-gradient(180deg,
+      #dff1f7 0%,
+      #eef8fb 45%,
+      #ffffff 100%);
+}
+
+/* RIGHT (LIGHT GRAY) CARD  */
+.hero-card-gray {
+  background-color: #f5f5f7;
+  color: #000000;
+}
+
+/*  HEADING IMAGE  */
+.hero-heading img {
+  max-width: 320px;
+  /* FIXED */
+  height: auto;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+/*  BUTTONS  */
+.hero-buttons5 {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 16px 0 32px;
+}
+
+/* BUTTON BASE  */
+.hero-buttons5 a {
+  font-size: 14px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* PRIMARY BUTTON  */
+.btn-primary5 {
+  background-color: #0071e3;
+  color: #ffffff;
+}
+
+.btn-primary5:hover {
+  background-color: #0077ed;
+}
+
+/* SECONDARY BUTTON  */
+.btn-secondary5 {
+  border: 1px solid #0071e3;
+  color: #0071e3;
+  background: transparent;
+}
+
+.btn-secondary5:hover {
+  background-color: #0071e3;
+  color: #ffffff;
+}
+
+/*  PRODUCT IMAGE */
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  transform: scale(1.02);
+  /* subtle like Apple */
+  display: block;
+}
+
+/* Apple tv card slyding section */
+.apple-tv-wrapper {
+  width: 100%;
+  overflow: hidden;
+  /* screen edge cut */
+  padding: 1px 0;
+  background-color: #f5f5f77a;
+}
+
+/*  INNER APPLE TV ROW */
+.apple-tv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  /* reduced gap */
+  width: 130%;
+  margin-left: -15%;
+}
+
+/* BASE CARD */
+.apple-tv>div {
+  position: relative;
+  aspect-ratio: 2500 / 1406;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+}
+
+/* LEFT & RIGHT  */
+.apple-tv .left,
+.apple-tv .right {
+  flex: 0 0 44%;
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
+/* CENTER */
+.apple-tv .middle {
+  flex: 0 0 54%;
+  transform: scale(0.9);
+  z-index: 2;
+}
+
+/*  IMAGE */
+.apple-tv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 1%;
+}
+
+/*  APPLE CINEMATIC GRADIENT */
+.apple-tv>div::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.4) 35%,
+      rgba(0, 0, 0, 0.15) 55%,
+      rgba(0, 0, 0, 0) 75%);
+  z-index: 1;
+}
+
+/*  INLINE CONTENT ROW  */
+.apple-tv .left,
+.apple-tv .middle,
+.apple-tv .right {
+  --content-bottom: 50px;
+}
+
+/* content wrapper */
+.apple-tv button,
+.apple-tv h4,
+.apple-tv p {
+  position: absolute;
+  bottom: var(--content-bottom);
+  z-index: 2;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+}
+
+/* inline row positioning */
+.apple-tv button {
+  left: 40px;
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 9px 22px;
+  border-radius: 999px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.apple-tv h4 {
+  left: 200px;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.apple-tv p {
+  left: 290px;
+  font-size: 19px;
+  margin: 0;
+  color: #fff;
+  opacity: 0.95;
+  white-space: nowrap;
+}
+
+/* Footer */
+
+.footer {
+  background: #f5f5f7;
+  color: #6e6e73;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+
+  /* reduced vertical padding */
+  padding: 10px 0 16px;
+}
+
+/*  DISCLAIMER TEXT  */
+
+.footer .doc {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.footer .doc p {
+  margin: 0 0 8px;
+  /* reduced from 10px */
+}
+
+.footer .doc a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.footer .doc a:hover {
+  text-decoration: underline;
+}
+
+/* SEPARATORS  */
+
+.footer hr {
+  border: none;
+  border-top: 1px solid #d2d2d7;
+
+  /* reduced spacing */
+  margin: 1px auto;
+  max-width: 1100px;
+}
+
+/*  FOOTER LINKS  */
+
+.footer-links {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  /* reduced top & bottom space */
+  padding: 14px 16px 16px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 26px;
+  /* slightly tighter */
+}
+
+.footer-links .col h5 {
+  font-size: 12px;
+  color: #1d1d1f;
+  font-weight: 600;
+  margin: 12px 0 6px;
+}
+
+.footer-links .col a {
+  display: block;
+  font-size: 12px;
+  color: #424245;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.footer-links .col a:hover {
+  text-decoration: underline;
+}
+
+/*  MORE WAYS TO SHOP */
+
+.more-shop {
+  max-width: 1100px;
+  margin: 8px auto 5px;
+  /* reduced */
+  padding: 0 16px;
+
+  font-size: 12px;
+  color: #6e6e73;
+
+  white-space: nowrap;
+}
+
+.more-shop a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.more-shop a:hover {
+  text-decoration: underline;
+}
+
+/*  END FOOT  */
+
+.end-foot {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  /* reduced vertical spacing */
+  padding: 10px 16px 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.end-foot p {
+  margin: 0;
+  margin-right: 14px;
+  color: #6e6e73;
+  white-space: nowrap;
+}
+
+.end-foot a {
+  color: #424245;
+  text-decoration: none;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.end-foot a:hover {
+  text-decoration: underline;
+}
+
+/* push country to right */
+.end-foot a:last-child {
+  margin-left: auto;
+}
